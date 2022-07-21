@@ -5,17 +5,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Id;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @ToString
-public class AdminDTO {
-    private String adminId;
+public class DriverDTO {
+    private String licenceNo;
     private String name;
     private String address;
-    private String contact;
-    private String email;
+    private int contactNo;
+    private String nicNo;
     private String username;
     private String password;
+    private final boolean availability = true;
 }
