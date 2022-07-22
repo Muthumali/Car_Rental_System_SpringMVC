@@ -1,0 +1,94 @@
+/*nav style*/
+
+body{
+    background-size: 100%;
+    overflow: hidden;
+}
+.nav-item {
+
+    font-weight: bolder;
+    font-size: 15px;
+}
+.navigation:hover {
+    color: red !important;
+}
+body >section> nav > div > a {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 40px;
+}
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+.navbar-collapse{
+    flex-grow: 0;
+}
+
+/*dash board style*/
+
+#dashBoardContent {
+    width: 100vw;
+    height: 100vh;
+    background: 100%;
+}
+
+#descriptionDiv {
+    position: absolute;
+    left: 0;
+    right: 400px;
+    top: 100px;
+    bottom: 49%;
+    margin: auto;
+    width: 41vw;
+    height: 7vh;
+    z-index: 10000;
+}
+#dis1{
+    font-weight: bold;
+    color: white;
+    font-size: 50px;
+}
+#dis2{
+    color: white;
+}
+
+/*login form*/
+
+#loginForm{
+    width: 28vw;
+    height: 510px;
+    position: absolute;
+    right: 1%;
+    top: 40px;
+    bottom: 0;
+    margin: auto;
+    background: linear-gradient(45deg, black, transparent);
+    border-radius: 1rem;
+    z-index: 100000000
+}
+#loginCloseBtn:hover{
+    background: red;
+}
+#loginCloseBtn{
+    position: absolute;
+    right: 0;
+    z-index: 1000000000;
+}
+.card{
+    background:transparent;
+}
+
+/*sign up*/
+#sec1{
+    position: absolute;
+    left: 8%;
+}
+#sec2{
+    position: absolute;
+    left: 37%;
+}
+#sec3{
+    position: absolute;
+    left: 69%;
+}
