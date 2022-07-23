@@ -92,3 +92,14 @@ body >section> nav > div > a {
     position: absolute;
     left: 69%;
 }
+/*admin dash board*/
+#sidebar{
+    background: black !important;
+    min-width: 100px;
+    width: 17vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top:55px;
+    transition: all 0.4s;
+}
