@@ -28,6 +28,12 @@
             background: url("assets/images/blackCar.jpg");
             background-size: 100% 100%;
         }
+        #adminImage {
+            width: 100vw;
+            height: 100vh;
+            background: url("assets/images/blackCar.jpg");
+            background-size: 100% 100%;
+        }
 
     </style>
 </head>
@@ -158,9 +164,11 @@
                                        type="text">
                             </div>
                             <div class="mb-3">
+                                <label class="form-label" for="imgNiCFront">NIC Front Image</label>
                                 <input type="file" class="form-control" id="imgNiCFront" name="imgFrontView">
                             </div>
                             <div class="mb-3">
+                                <label class="form-label" for="imgNiCBack">NIC Back Image</label>
                                 <input type="file" class="form-control" id="imgNiCBack" name="imgBackView">
                             </div>
                             <div class="mb-3">
@@ -169,6 +177,7 @@
                                        type="text">
                             </div>
                             <div class="mb-3">
+                                <label class="form-label" for="imgLicence">Licence Image</label>
                                 <input type="file" class="form-control" id="imgLicence" name="imgLicence">
                             </div>
 
@@ -202,27 +211,308 @@
 </section>
 <!------------------------Admin Dash Board content start------------------------------>
 <section class="container-fluid" id="adminDash">
+    <div id="adminImage">
     <nav id="sidebar">
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a id="linkCarDetail" class="nav-link text-white" ><i class="fas fa-solid fa-car-side"></i>  Manage Car</a>
+                <a id="linkCarManage" class="nav-link text-white" href="#"><i class="fas fa-solid fa-car-side"></i>  Manage Car</a>
             </li>
             <li class="nav-item">
-                <a id="linkDriver" class="nav-link text-white"><i class="fas fa-solid fa-users"></i>  Manage Driver</a>
+                <a id="linkDriver" class="nav-link text-white" href="#"><i class="fas fa-solid fa-users"></i>  Manage Driver</a>
             </li>
             <li class="nav-item">
-                <a id="linkCustomer" class="nav-link text-white"><i class="fas fa-user-cog"></i>  Manage Customer</a>
+                <a id="linkCustomer" class="nav-link text-white" href="#"><i class="fas fa-user-cog"></i>  Manage Customer</a>
             </li>
             <li class="nav-item">
-                <a id="linkPayment" class="nav-link text-white"><i class="fas fa-solid fa-credit-card"></i>  Manage Payment</a>
+                <a id="linkPayment" class="nav-link text-white" href="#"><i class="fas fa-solid fa-credit-card"></i>  Manage Payment</a>
             </li>
             <li class="nav-item">
-                <a id="linkMaintenance" class="nav-link text-white"><i class="fas fa-solid fa-screwdriver"></i>  Manage Maintenance</a>
+                <a id="linkMaintenance" class="nav-link text-white" href="#"><i class="fas fa-solid fa-screwdriver"></i>  Manage Maintenance</a>
             </li>
         </ul>
     </nav>
+    </div>
 </section>
 
+<!------------------------Manage Car table content----------------------------------------->
+<section class="container-fluid" id="ManageTableCar">
+    <div id="manageCarTableContent">
+        <div class="col">
+            <table class="table table-bordered table-hover">
+                <thead class="bg-white text-black">
+                <tr>
+                    <th>Register No</th>
+                    <th>Brand</th>
+                    <th>Type</th>
+                    <th>No of passengers</th>
+                    <th>Transmission Type</th>
+                    <th>Fuel tYpe</th>
+                    <th>Daily Rate</th>
+                    <th>Monthly Rate</th>
+                    <th>Free mileage Price</th>
+                    <th>Free mileage Duration</th>
+                    <th>loss Damage waiver</th>
+                    <th>Price for Extra KM</th>
+                    <th>Complete KM</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblCustomerJson">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row-cols-2">
+        <button type="button" class="btn btn-warning" id="manageCarDetails" href="#">Manage Car Details >></button>
+    </div>
+</section>
+<!------------------------Manage Car content----------------------------------------->
+<section class="container-fluid" id="manageCar">
+<div id="manageCarContent">
+    <section class="container-fluid  bg-black text-white">
+        <h1 class="fw-bold">Manage Car</h1>
+    </section>
+    <section class="container-fluid mt-3" >
+        <div class="row mt-3">
+            <div class="col-4">
+                <form id="carForm">
+                    <section id="sec1Car">
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="carRegisterId">Register ID</label>
+                            <input class="form-control" id="carRegisterId" name="id" placeholder="Register ID" type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="carBrand">Car Band(ex:Toyota,Suzuki) </label>
+                            <input class="form-control" id="carBrand" name="brand" placeholder="Car Brand"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="carType">Car Type(ex: mini,luxury)</label>
+                            <input class="form-control" id="carType" name="type" placeholder="Car Type"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="carPassengers">No Of Passengers</label>
+                            <input class="form-control" id="carPassengers" name="passengers" placeholder="No of Passengers"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="carTransmissionType">Transmission Type(Auto,Manual)</label>
+                            <input class="form-control" id="carTransmissionType" name="transmission" placeholder="Transmission Type"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="fuelType">Fuel Type(Diesel,Petrol)</label>
+                            <input class="form-control" id="fuelType" name="fuel" placeholder="Fuel Type"
+                                   type="text">
+                        </div>
+                        <div class="row-cols-2">
+                            <button type="button" class="btn btn-warning" id="LinkBackToTable" href="#"><< back</button>
+                        </div>
+                    </section>
+                    <section id="sec2Car">
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="carColor">Color</label>
+                            <input class="form-control" id="carColor" name="Color" placeholder="Color"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="dailyRate">Daily rate</label>
+                            <input class="form-control" id="dailyRate" name="dailyRate" placeholder="Daily Rate"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="monthlyRate">Monthly Rate</label>
+                            <input class="form-control" id="monthlyRate" name="monthlyRate" placeholder="Monthly Rate"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="mileagePrice">Free Mileage Price</label>
+                            <input class="form-control" id="mileagePrice" name="mileagePrice" placeholder="Free Mileage Price"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="mileageDuration">Free Mileage Duration</label>
+                            <input class="form-control" id="mileageDuration" name="mileageDuration" placeholder="Free Mileage Duration"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="priceOfExtraKM">Price Of Extra KM</label>
+                            <input class="form-control" id="priceOfExtraKM" name="priceOfExtraKM" placeholder="Price Of Extra KM"
+                                   type="text">
+                        </div>
+                    </section>
+                    <section id="sec3Car">
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="lossDamageWaiver">loss Damage Waiver</label>
+                            <input class="form-control" id="lossDamageWaiver" name="lossDamageWaiver" placeholder="loss Damage Waiver"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="completeKm">Complete Km</label>
+                            <input class="form-control" id="completeKm" name="completeKm" placeholder="Complete Km"
+                                   type="text">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="frontViewIm">Front View Image</label>
+                            <input type="file" class="form-control" id="frontViewIm" name="frontViewIm">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="backViewIm">Back View Image</label>
+                            <input type="file" class="form-control" id="backViewIm" name="backViewIm">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="sideViewIm">Side View Image</label>
+                            <input type="file" class="form-control" id="sideViewIm" name="sideViewIm">
+                        </div>
+                        <div class="mb-sm-0">
+                            <label class="form-label" for="internalViewIm">Internal View Image</label>
+                            <input type="file" class="form-control" id="internalViewIm" name="internalViewIm">
+                        </div>
+
+                        <div class="row-cols-4">
+                            <button type="button" class="btn btn-success" id="addCar">Save</button>
+                            <button type="button" class="btn btn-primary" id="updateCar">Update</button>
+                            <button type="button" class="btn btn-danger" id="deleteCar">Delete</button>
+                        </div>
+                    </section>
+
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+</section>
+<!--Services Form Start-->
+<!--<section class="container-fluid" id="serviceContent">
+    <div id="serviceThumbnail" >
+        <h1 id="serviceTittle">Our Services</h1>
+    </div>
+    <div class="row justify-content-center" id="serviceInfoTitle">
+        <div class="col">
+            <h3 class="text-primary "id="services2">SERVICES</h3>
+            <h1><strong>Our Latest Services</strong></h1>
+        </div>
+    </div>
+    <div class="row" id="serviceInfoDiv">
+        <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <div class="divIcon" id="divIcon1"></div>
+                </div>
+                <div class="text w-100">
+                    <h3 class="heading mb-2">Wedding Ceremony</h3>
+                    <p class="lh-lg">If you're one of the people who has always wanted to have a grand wedding and arrive in style, this is the article for you. Sit back and relax because we're here to scratch off a task from your wedding to-do list and take some load off.  Here is a listicle of some wedding car hire services that will give you a lavish and comfortable transport experience. Be it your market sprees or picking your guests up, they won't disappoint you.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <div class="divIcon" id="divIcon2"></div>
+                </div>
+                <div class="text w-100">
+                    <h3 class="heading mb-2">City Transfer</h3>
+                    <p class="lh-lg">According to our data, Easy Car-Rental is the cheapest rental car agency in Sri Lanka. Users who book a rental car with Easy Car-Rental often find prices below the $43 average daily rate each day. Depending on the city you visit, what type of car you’re interested in, and the length of your rental, you could find prices for as low as $28 each day when booking with Easy Car-Rental.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <div class="divIcon" id="divIcon3"></div>
+                </div>
+                <div class="text w-100">
+                    <h3 class="heading mb-2">Airport Transfer</h3>
+                    <p class="lh-lg">We wait for you at the airport to take you to your accommodation by private transport. 24/7 service from or to the airport at any time you need it. Book your transfer. Make A Booking. 24/7 E-Mail Support. Services: All payment options, 24 hours service, Car, SUV.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="services services-2 w-100 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <div id="divIcon4" class="divIcon">
+
+                    </div>
+                </div>
+                <div class="text w-100">
+                    <h3 class="heading mb-2">Whole City Tour</h3>
+                    <p class="lh-lg">fascinating journey through the vibes & sounds of a multicultural, multi-religion capital. Crowded street markets, slums and uprising urban lifestyle of the war-torn country. We are taking you to witness Colombo as it is, through its Victorian architecture, its monasteries and Kovils. Bargain street markets and chic joints. All to remember and take good memories of Sri Lanka with you!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col driverNeedDiv">
+        <div class="driverNeedDiv1 row">
+        </div>
+        <div class="driverNeedDivImg row" >
+            <img id="driverNeedImg1" src="assets/images/needDriver.png" alt="">
+            <button type="button" class="driverNeedBtn btn justify-content-center row">Become A Driver</button>
+        </div>
+        <div class="row" id="driverInfoDiv">
+            <div class="col-md-3">
+                <div class="services services-2 w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <div id="driverIcon" class="driverIcon">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="driverInfoText">
+            <div class="text w-100">
+                <h2 class="heading mb-2" id="driverName">Simon Deadru</h2>
+
+                <ul class=" list-group-flush">
+                    <li class="list-group-item"><b>5 Years Experience</b></li>
+                </ul>
+            </div></div>
+
+        <div class="row" id="driverInfoDiv2">
+            <div class="col-md-3">
+                <div class="services services-2 w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <div id="driverIcon2" class="driverIcon">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="driverInfoText2">
+            <div class="text w-100">
+                <h2 class="heading mb-2" id="driverName2">Jean Alesi</h2>
+
+                <ul class=" list-group-flush">
+                    <li class="list-group-item"><b>3 Years Experience</b></li>
+                </ul>
+            </div></div>
+    </div>
+</section>-->
 
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
@@ -230,15 +520,10 @@
     $("#dashBoardContent").css("display", "block");
     $("#loginForm").css("display", "none");
     $("#adminDash").css("display", "none");
+    $("#serviceContent").css("display", "none");
+    $("#manageCar").css("display", "none");
+    $("#ManageTableCar").css("display", "none");
 
-   /* $("#linkCar").click(function () {
-        $("#dashBoardContent").css("display", "none");
-        $("#carContent").css("display", "block");
-    });
-    $("#rentCarBtnDashBoard").click(function () {
-        $("#dashBoardContent").css("display", "none");
-        $("#carContent").css("display", "block");
-    });*/
     $("#linkHome").click(function () {
         $("#dashBoardContent").css("display", "block");
         $("#carContent").css("display", "none");
@@ -246,6 +531,9 @@
     $("#linkSignUp").click(function () {
         $("#dashBoardContent").css("display", "none");
         $("#signUp").css("display", "block");
+        $("#adminDash").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
     });
 
     $("#linkLogin").click(function () {
@@ -256,8 +544,43 @@
         $("#loginForm").css("display", "none");
     });
 
+    $("#linkServices").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "block");
+
+    });
+
+    $("#linkCarManage").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#ManageTableCar").css("display", "block");
+        $("#adminDash").css("display", "block");
+
+    });
+
+    $("#manageCarDetails").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "block");
+        $("#ManageTableCar").css("display", "none");
+        $("#adminDash").css("display", "block");
+    });
+
+    $("#LinkBackToTable").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#ManageTableCar").css("display", "block");
+        $("#adminDash").css("display", "block");
+    });
+
     $("#loginBtn").click(function () {
-    if ($("#typeEmailX").val()==="user@gmail.com" && $("#typePasswordX").val()==="user12") {
+    if ($("#typeEmailX").val()==="admin@gmail.com" && $("#typePasswordX").val()==="admin99") {
         $("#dashBoardContent").css("display", "none");
         $("#adminDash").css("display", "block");
         $("#loginForm").css("display", "none");
