@@ -38,7 +38,7 @@
     </style>
 </head>
 <body>
-<!--..............Nav Content Start............................-->
+<!--..............Nav Content Start............................--------------->
 <section class="container-fluid" id="NavContent">
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark navtop">
         <div class="container-fluid">
@@ -73,7 +73,6 @@
         </div>
     </nav>
 </section>
-
 <!----------------------Dash Board Content Start----------------------------->
 <section class="container-fluid" id="dashBoardContent">
     <div id="bgImageDashBoardDiv">
@@ -233,7 +232,6 @@
     </nav>
     </div>
 </section>
-
 <!------------------------Manage Car table content----------------------------------------->
 <section class="container-fluid" id="ManageTableCar">
     <div id="manageCarTableContent">
@@ -282,7 +280,7 @@
         <button type="button" class="btn btn-warning" id="manageCarDetails" href="#">Manage Car Details >></button>
     </div>
 </section>
-<!------------------------Manage Car content----------------------------------------->
+<!------------------------Manage Car content----------------------------------------------->
 <section class="container-fluid" id="manageCar">
 <div id="manageCarContent">
     <section class="container-fluid  bg-black text-white">
@@ -403,7 +401,7 @@
 </div>
 
 </section>
-<!--Services Form Start-->
+<!-----------------------Services Form Start-------------------------------------------->
 <!--<section class="container-fluid" id="serviceContent">
     <div id="serviceThumbnail" >
         <h1 id="serviceTittle">Our Services</h1>
@@ -513,6 +511,52 @@
             </div></div>
     </div>
 </section>-->
+<!-----------------------Manage User-------------------------------------------------->
+<section class="container-fluid" id="manageUser">
+    <section class="container-fluid  bg-black text-white">
+        <h1 class="fw-bold">Manage User</h1>
+    </section>
+    <div id="manageUserTable">
+        <div class="col-5">
+            <table class="table table-bordered table-hover">
+                <thead class="bg-white text-black">
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Contact NO</th>
+                    <th>email</th>
+                    <th>NIC No</th>
+                    <th>NIC Front Image</th>
+                    <th>NIC Back Image</th>
+                    <th>Licence NO</th>
+                    <th>Licence Image</th>
+                    <th>UserName</th>
+                    <th>Password</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblUserJson">
+                <tr>
+                    <td>C001</td>
+                    <td>Chandana</td>
+                    <td>Matara</td>
+                    <td>0719543011</td>
+                    <td>chandana@gmail.com</td>
+                    <td>97857362V</td>
+                    <td></td>
+                    <td></td>
+                    <td>65788890</td>
+                    <td></td>
+                    <td>saman</td>
+                    <td>saman1234</td>
+                    <td>pending</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
 
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
@@ -523,6 +567,7 @@
     $("#serviceContent").css("display", "none");
     $("#manageCar").css("display", "none");
     $("#ManageTableCar").css("display", "none");
+    $("#manageUser").css("display", "none");
 
     $("#linkHome").click(function () {
         $("#dashBoardContent").css("display", "block");
@@ -548,7 +593,6 @@
         $("#dashBoardContent").css("display", "none");
         $("#signUp").css("display", "none");
         $("#serviceContent").css("display", "block");
-
     });
 
     $("#linkCarManage").click(function () {
@@ -556,9 +600,9 @@
         $("#signUp").css("display", "none");
         $("#serviceContent").css("display", "none");
         $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
         $("#ManageTableCar").css("display", "block");
         $("#adminDash").css("display", "block");
-
     });
 
     $("#manageCarDetails").click(function () {
@@ -567,6 +611,7 @@
         $("#serviceContent").css("display", "none");
         $("#manageCar").css("display", "block");
         $("#ManageTableCar").css("display", "none");
+        $("#manageUser").css("display", "none");
         $("#adminDash").css("display", "block");
     });
 
@@ -577,6 +622,16 @@
         $("#manageCar").css("display", "none");
         $("#ManageTableCar").css("display", "block");
         $("#adminDash").css("display", "block");
+        $("#manageUser").css("display", "none");
+    });
+    $("#linkCustomer").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#ManageTableCar").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#manageUser").css("display", "block");
     });
 
     $("#loginBtn").click(function () {

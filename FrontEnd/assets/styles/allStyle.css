@@ -261,3 +261,13 @@ body >section> nav > div > a {
     bottom: 5vh;
     width: 20%;
 }
+
+#manageUserTable{
+    position: absolute;
+    width: 83vw;
+    height: 100vh;
+    right: 0;
+    top: 55px;
+    left: 17vw;
+    background: gray !important;
+}
