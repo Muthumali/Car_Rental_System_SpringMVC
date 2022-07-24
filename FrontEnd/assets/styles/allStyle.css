@@ -103,6 +103,25 @@ body >section> nav > div > a {
     top:55px;
     transition: all 0.4s;
 }
+#dashside{
+    position: absolute;
+    left: 17%;
+}
+#dashboard-content{
+    position: absolute;
+    width: 82vw;
+    height: 90vh;
+    left: 30vw;
+}
+.dashboard{
+    position: absolute;
+    width: 82vw;
+    height: 90vh;
+}
+.details-box{
+    border-radius: 40px;
+    box-shadow: 12px 12px 22px gray;
+}
 /*service */
 .divIcon{
     width: 150px;

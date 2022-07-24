@@ -230,7 +230,111 @@
             </li>
         </ul>
     </nav>
+        <section id="dashside">
+        <div id="dashboard-pg">
+            <div class="dashboard">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">DASHBOARD</h2>
+                </div>
+                <div class="full-space container-fluid px-4">
+                    <div class="details-space row g-3 my-2">
+                        <div class="col-md-4">
+                            <div class="p-3 bg-white d-flex justify-content-around align-items-center details-box">
+                                <div>
+                                    <h3 class="fs-2 text-center">00</h3>
+                                    <p class="fs-5">Pending Customer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="p-3 bg-white d-flex justify-content-around align-items-center details-box">
+                                <div>
+                                    <h3 class="fs-2 text-center">00</h3>
+                                    <p class="fs-5">Requested Customer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="p-3 bg-white d-flex justify-content-around align-items-center details-box">
+                                <div>
+                                    <h3 class="fs-2 text-center">00</h3>
+                                    <p class="fs-5">Daily Rent</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="full-space container-fluid px-4">
+                        <div class="details-space row g-3 my-2">
+                            <div class="col-md-4">
+                                <div class="p-3 bg-white d-flex justify-content-around align-items-center details-box">
+                                    <div>
+                                        <h3 class="fs-2 text-center">00</h3>
+                                        <p class="fs-5">Available Cars</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="p-3 bg-white d-flex justify-content-around align-items-center details-box">
+                                    <div>
+                                        <h3 class="fs-2 text-center">00</h3>
+                                        <p class="fs-5">Rent Cars</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="p-3 bg-white d-flex justify-content-around align-items-center details-box">
+                                    <div>
+                                        <h3 class="fs-2 text-center">00</h3>
+                                        <p class="fs-5">Available Drivers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h2 class="text-center">Daily Rent Car Details</h2>
+                <br>
+                <div class="col">
+                    <table class="table table-bordered table-hover">
+                        <thead class="bg-warning text-black">
+                        <tr>
+                            <th>Rent ID</th>
+                            <th>Date</th>
+                            <th>Release Date</th>
+                            <th>Return Date</th>
+                            <th>Customer ID</th>
+                            <th>Car Reg.No</th>
+                            <th>Driving Lic.No</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblDailyRentDetailsJson">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </section>
     </div>
+
 </section>
 <!------------------------Manage Car table content----------------------------------------->
 <section class="container-fluid" id="ManageTableCar">
@@ -651,14 +755,9 @@
                         </table>
                     </div>
                 </div>
-        </section>
             </div>
-
-
         </section>
-
     </div>
-
 </section>
 
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
@@ -683,6 +782,7 @@
         $("#adminDash").css("display", "none");
         $("#serviceContent").css("display", "none");
         $("#manageCar").css("display", "none");
+        $("#manageDriver").css("display", "none");
     });
 
     $("#linkLogin").click(function () {
