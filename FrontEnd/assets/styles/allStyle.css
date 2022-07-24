@@ -261,7 +261,7 @@ body >section> nav > div > a {
     bottom: 5vh;
     width: 20%;
 }
-
+/*mange Customer*/
 #manageUserTable{
     position: absolute;
     width: 83vw;
@@ -270,4 +270,31 @@ body >section> nav > div > a {
     top: 55px;
     left: 17vw;
     background: gray !important;
+}
+/*manage driver*/
+#manageDriverContent{
+    position: absolute;
+    width: 83vw;
+    height: 100vh;
+    right: 0;
+    top: 55px;
+    left: 17vw;
+    background: gray !important;
+}
+#sec1Driver{
+    position: absolute;
+    left: 8%;
+}
+#sec2Driver{
+    position: absolute;
+    left: 37%;
+}
+#sec3Driver{
+    position: absolute;
+    left: 69%;
+}
+#manageDriverTable{
+    position: absolute;
+    top: 50%;
+    left: 10%;
 }
