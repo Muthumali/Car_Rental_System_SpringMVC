@@ -20,12 +20,7 @@
             background: url("assets/images/blackCar.jpg");
             background-size: 100% 100%;
         }
-        #signUpImage {
-            width: 100vw;
-            height: 100vh;
-            background: url("assets/images/blackCar.jpg");
-            background-size: 100% 100%;
-        }
+
         #adminImage {
             width: 100vw;
             height: 100vh;
@@ -33,14 +28,6 @@
             background-size: 100% 100%;
         }
 
-       .serviceThumbnail {
-            width: 100vw;
-            height: 90vh;
-            background: green;
-            background: url("assets/images/service.jpg");
-            background-size: 100% 100%;
-            position: absolute;
-        }
         #divIcon1 {
             background: url("assets/images/icons/wedding.png");
             background-size: 100% 100%;
@@ -59,14 +46,6 @@
         #divIcon4 {
             background: url("assets/images/icons/whole.png");
             background-size: 100% 100%;
-        }
-        #carThumbnail {
-            width: 100vw;
-            height: 90vh;
-            background: green;
-            background: url("assets/images/ca.jpg");
-            background-size: 100% 100%;
-            position: absolute;
         }
         #iconuser{
             width:80px;
@@ -274,6 +253,15 @@
             </li>
             <li class="nav-item">
                 <a id="linkMaintenance" class="nav-link text-white" href="#"><i class="fas fa-solid fa-screwdriver"></i>  Manage Maintenance</a>
+            </li>
+            <li class="nav-item">
+                <a id="linkReq" class="nav-link text-white" href="#"><i class="fas fa-solid fa-screwdriver"></i>  Requests</a>
+            </li>
+            <li class="nav-item">
+                <a id="linkRentalReturn" class="nav-link text-white" href="#"><i class="fas fa-solid fa-screwdriver"></i>  Rental returns</a>
+            </li>
+            <li class="nav-item">
+                <a id="linkIncomeReports" class="nav-link text-white" href="#"><i class="fas fa-solid fa-screwdriver"></i>  Income Reports</a>
             </li>
         </ul>
     </nav>
@@ -1205,10 +1193,10 @@
         </div>
     </div>
 </section>
-<!-------------------------Payment--------------------------------------------------------------->
+<!-------------------------Payment user--------------------------------------------------------------->
 <section class="container-fluid bg-white" id="paymentUser">
         <div class="row text-center"><h1 class="h1 display-5">Payments</h1></div>
-            <table class="table table-hover table-bordered table-striped" id="paymentsTbl">
+            <table class="table table-hover table-bordered table-striped" id="paymentsTbl1">
                 <thead class="bg-warning" style="color: black">
                 <tr>
                     <th>Payment ID</th>
@@ -1224,7 +1212,41 @@
     </div>
 
 </section>
+<!-------------------------Payment Details------------------------------------------------------------>
+<section class="container-fluid" id="paymentDetailsContent">
+        <div class="row text-center"><h1 class="h1 display-5">Payment Details</h1></div>
+        <div class="row m-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <div>
+                    <label for="pickFromDate" class="form-label">From</label>
+                    <input type="date" id="pickFromDate" class="form-control" name="fromDate"
+                           placeholder="Start Date">
+                </div>
+                <div>
+                    <label for="pickFromDate" class="form-label">To</label>
+                    <input type="date" id="pickToDate" class="form-control" name="toDate"
+                           placeholder="End Date">
+                </div>
+                <button type="button" class="btn btn-danger mt-3" id="btnSearchPayment" style=" height: 36px;position: relative;top: 17px;">Search</button>
+            </div>
+        </div>
+        <div class="bg-light" style="height: 65vh">
+            <table class="table table-hover table-bordered table-striped" id="paymentsTbl">
+                <thead style="background-color: black; color: white">
+                <tr>
+                    <th>Payment ID</th>
+                    <th>Date</th>
+                    <th>Amount (Rs.)</th>
+                    <th>Rent ID</th>
+                    <th>Customer ID</th>
+                </tr>
+                </thead>
+                <tbody id="tblPayments">
 
+                </tbody>
+            </table>
+        </div>
+</section>
 
 
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
@@ -1244,6 +1266,7 @@
     $("#dashUser").css("display", "none");
     $("#bookingRes").css("display", "none");
     $("#paymentUser").css("display", "none");
+    $("#paymentDetailsContent").css("display", "none");
 
     $("#linkHome").click(function () {
         $("#dashBoardContent").css("display", "block");
@@ -1258,6 +1281,7 @@
         $("#dashUser").css("display", "none");
         $("#bookingRes").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
     $("#linkSignUp").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1271,6 +1295,7 @@
         $("#dashUser").css("display", "none");
         $("#bookingRes").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
 
     $("#linkLogin").click(function () {
@@ -1295,6 +1320,7 @@
         $("#dashUser").css("display", "none");
         $("#bookingRes").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
 
     $("#linkCarManage").click(function () {
@@ -1311,6 +1337,7 @@
         $("#dashUser").css("display", "none");
         $("#bookingRes").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
 
     $("#manageCarDetails").click(function () {
@@ -1327,6 +1354,7 @@
         $("#dashUser").css("display", "none");
         $("#bookingRes").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
 
     $("#LinkBackToTable").click(function () {
@@ -1343,6 +1371,7 @@
         $("#dashUser").css("display", "none");
         $("#bookingRes").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
     $("#linkCustomer").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1358,6 +1387,7 @@
         $("#dashUser").css("display", "none");
         $("#bookingRes").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
     $("#linkDriver").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1373,6 +1403,7 @@
         $("#dashUser").css("display", "none");
         $("#bookingRes").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
     $("#linkCarDetails").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1388,6 +1419,7 @@
         $("#dashUser").css("display", "none");
         $("#bookingRes").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
     $("#linkBookingReq").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1403,6 +1435,7 @@
         $("#dashUser").css("display", "block");
         $("#bookingRes").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
     $("#linkBookingRes").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1418,6 +1451,7 @@
         $("#carRentalContent").css("display", "block");
         $("#dashUser").css("display", "none");
         $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
     });
     $("#linkPaymentCus").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1433,6 +1467,23 @@
         $("#carRentalContent").css("display", "block");
         $("#dashUser").css("display", "none");
         $("#paymentUser").css("display", "block");
+        $("#paymentDetailsContent").css("display", "none");
+    });
+    $("#linkPayment").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#ManageTableCar").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "block");
     });
 
 

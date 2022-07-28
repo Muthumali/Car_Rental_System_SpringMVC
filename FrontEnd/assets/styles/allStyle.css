@@ -393,3 +393,13 @@ body >section> nav > div > a {
     top: 20vh;
     left: 20vw;
 }
+/*payment details*/
+#paymentDetailsContent{
+    position: absolute;
+    width: 83vw;
+    height: 100vh;
+    right: 0;
+    top: 55px;
+    left: 17vw;
+    background: gray !important;
+}
