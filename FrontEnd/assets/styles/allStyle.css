@@ -3,9 +3,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 body{
-    background-size: 90%;
-}
-#NavContent{
+    background-size: 100%;
 }
 .nav-item {
     font-weight: bolder;
@@ -15,7 +13,7 @@ body{
     color: red !important;
 }
 body >section> nav > div > a {
-    color: #ffffff !important;
+    color: white !important;
     font-weight: bold;
     font-size: 40px;
 }
@@ -28,13 +26,10 @@ body >section> nav > div > a {
 }
 
 /*dash board style*/
-
 #dashBoardContent {
     width: 100vw;
     height: 90vh;
-
 }
-
 #descriptionDiv {
     position: absolute;
     left: 0;
@@ -56,7 +51,6 @@ body >section> nav > div > a {
 }
 
 /*login form*/
-
 #loginForm{
     width: 28vw;
     height: 510px;
@@ -94,6 +88,7 @@ body >section> nav > div > a {
     position: absolute;
     left: 69%;
 }
+
 /*admin dash board*/
 #sidebar{
     background: black !important;
@@ -124,6 +119,7 @@ body >section> nav > div > a {
     border-radius: 40px;
     box-shadow: 12px 12px 22px gray;
 }
+
 /*service */
 .divIcon{
     width: 150px;
@@ -142,7 +138,7 @@ body >section> nav > div > a {
 }
 #serviceInfoDiv{
     position: absolute;
-    top: 125%;
+    top: 20%;
 }
 .driverNeedDiv{
     position: absolute;
@@ -165,9 +161,6 @@ body >section> nav > div > a {
     position: absolute;
     right: 0;
     top: 0;
-    /* border-bottom: 381px solid black;
-     border-left: 175px solid transparent;
-     border-right: 0 solid transparent;*/
     height: 100%;
     width: 73%;
 }
@@ -196,7 +189,8 @@ body >section> nav > div > a {
     right: 0;
     bottom: 0;
     margin: auto;
-}#driverInfoDiv2{
+}
+#driverInfoDiv2{
      position: absolute;
      left: 0;
      top: 77%;
@@ -204,7 +198,8 @@ body >section> nav > div > a {
      right: 0;
      bottom: 0;
      margin: auto;
- }#driverInfoText{
+ }
+#driverInfoText{
       position: absolute;
       width: 26%;
       height: 0;
@@ -214,7 +209,8 @@ body >section> nav > div > a {
       right: 29%;
       bottom: 0;
       margin: auto;
-  }#driverInfoText2{
+  }
+#driverInfoText2{
        position: absolute;
        width: 26%;
        height: 0;
@@ -232,7 +228,7 @@ body >section> nav > div > a {
     position: absolute;
     left: 35%;
     right: 0;
-    top: 110%;
+    top: 10%;
     margin: auto;
     z-index: 2500000000000000000000;
 }
@@ -245,6 +241,7 @@ body >section> nav > div > a {
     margin: auto;
     font-size: 18px;
 }
+
 /*manage car*/
 #manageCarContent{
     position: absolute;
@@ -267,6 +264,7 @@ body >section> nav > div > a {
     position: absolute;
     left: 69%;
 }
+
 /*mange table car*/
 #manageCarTableContent{
     position: absolute;
@@ -283,6 +281,7 @@ body >section> nav > div > a {
     bottom: 5vh;
     width: 20%;
 }
+
 /*mange Customer*/
 #manageUserTable{
     position: absolute;
@@ -293,6 +292,7 @@ body >section> nav > div > a {
     left: 17vw;
     background: gray !important;
 }
+
 /*manage driver*/
 #manageDriverContent{
     position: absolute;
@@ -341,10 +341,55 @@ body >section> nav > div > a {
     color: white;
     font-size: 100px;
 }
-
 #carTable{
     position: absolute;
-    margin-top: 47%;
+    margin-top: 1%;
     right: 1%;
     left: 1%;
+}
+
+/*car rent user*/
+#sidebarCus{
+    background: black !important;
+    min-width: 100px;
+    width: 15vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top:55px;
+    transition: all 0.4s;
+}
+#uibar{
+    position: absolute;
+    top:90px ;
+}
+#dashUser{
+    position: absolute;
+    left: 15vw;
+    height: 100vh;
+    width: 85vw;
+}
+#bookingRes{
+    position: absolute;
+    left: 15vw;
+    height: 100vh;
+    width: 85vw;
+}
+#btnDeleteRental{
+    background: red;
+    color: white;
+}
+#paymentUser{
+    position: absolute;
+    left: 15vw;
+    width: 85vw;
+    height: 100vh;
+}
+#collagePara{
+    position: absolute;
+    color: black;
+    background-color: yellow;
+    font-size: 50px;
+    top: 20vh;
+    left: 20vw;
 }

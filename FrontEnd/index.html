@@ -16,7 +16,7 @@
 
         #bgImageDashBoardDiv {
             width: 100vw;
-            height: 90vh;
+            height: 100vh;
             background: url("assets/images/blackCar.jpg");
             background-size: 100% 100%;
         }
@@ -60,17 +60,30 @@
             background: url("assets/images/icons/whole.png");
             background-size: 100% 100%;
         }
-        #welcomeImgDiv {
-            background: url("assets/images/carThumbnail.jpg");
-            background-size: 100% 100%;
-        }
         #carThumbnail {
             width: 100vw;
             height: 90vh;
             background: green;
-            background: url("assets/images/carrentalimg1.jpg");
+            background: url("assets/images/ca.jpg");
             background-size: 100% 100%;
             position: absolute;
+        }
+        #iconuser{
+            width:80px;
+            height: 80px;
+            background: url("assets/images/icons/user.png");
+            position: absolute;
+            top: 10px;
+            left: 40px;
+        }
+        #sideUserDash{
+            position: absolute;
+            left: 15vw;
+            width: 85vw;
+            height: 100vh;
+            background: green;
+            background: url("assets/images/carCollage.jpg");
+            background-size: 100% 100%;
         }
     </style>
 </head>
@@ -126,10 +139,10 @@
                 <div class="card-body p-2 text-center ">
 
                     <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                    <p class="text-white-50 mb-3">Please enter your email and password!</p>
+                    <p class="text-white-50 mb-3">Please enter your User Name and password!</p>
                     <div class="form-outline form-white mb-4">
                         <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                        <label class="form-label" for="typeEmailX">Email</label>
+                        <label class="form-label" for="typeEmailX">User Name</label>
                     </div>
                     <div class="form-outline form-white mb-4">
                         <input type="password" id="typePasswordX" class="form-control form-control-lg" />
@@ -155,7 +168,7 @@
 </section>
 <!-----------------------sign up content Start---------------------------------------->
 <section class="container-fluid" id="signUp">
-    <div id="signUpImage">
+    <div class="bg-white">
         <section class="container-fluid p-3 bg-black text-white">
             <h1 class="fw-bold">New User Registration</h1>
         </section>
@@ -165,51 +178,51 @@
                 <div class="col-4">
                     <form id="customerForm">
                         <section id="sec1">
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="cusID">User ID</label>
                                 <input class="form-control" id="cusID" name="id" placeholder="User ID" type="text">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="cusName">User Name</label>
                                 <input class="form-control" id="cusName" name="name" placeholder="User Name"
                                        type="text">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="cusAddress">User Address</label>
                                 <input class="form-control" id="cusAddress" name="address" placeholder="User Address"
                                        type="text">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="cusContact">Contact No</label>
                                 <input class="form-control" id="cusContact" name="Contact" placeholder="Contact No"
                                        type="text">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="cusEmail">Email</label>
                                 <input class="form-control" id="cusEmail" name="Email" placeholder="Email"
                                        type="text">
                             </div>
                         </section>
                         <section id="sec2">
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="cusNic">NIC No</label>
                                 <input class="form-control" id="cusNic" name="NIC" placeholder="NIC No"
                                        type="text">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="imgNiCFront">NIC Front Image</label>
                                 <input type="file" class="form-control" id="imgNiCFront" name="imgFrontView">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="imgNiCBack">NIC Back Image</label>
                                 <input type="file" class="form-control" id="imgNiCBack" name="imgBackView">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="cusLicence">Licence No</label>
                                 <input class="form-control" id="cusLicence" name="Licence" placeholder="Licence No"
                                        type="text">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="imgLicence">Licence Image</label>
                                 <input type="file" class="form-control" id="imgLicence" name="imgLicence">
                             </div>
@@ -218,17 +231,17 @@
 
                         <section id="sec3">
 
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="cusUserName">User Name</label>
                                 <input class="form-control" id="cusUserName" name="UserName" placeholder="User Name"
                                        type="text">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-sm-0">
                                 <label class="form-label" for="password">Email</label>
                                 <input class="form-control" id="password" name="Password" placeholder="Password"
                                        type="text">
                             </div>
-                            <div class="col-3">
+                            <div class="row-cols-1 m-3">
                                 <button type="button" class="btn btn-success" id="registerBtn">Register</button>
                             </div>
                         </section>
@@ -242,7 +255,7 @@
     </div>
 
 </section>
-<!------------------------Admin Dash Board content start------------------------------>
+<!------------------------Admin Dash Board content start-------------------------------------->
 <section class="container-fluid" id="adminDash">
     <div id="adminImage">
     <nav id="sidebar">
@@ -370,7 +383,7 @@
     </div>
 
 </section>
-<!------------------------Manage Car table content----------------------------------------->
+<!------------------------Manage Car table content-------------------------------------------->
 <section class="container-fluid" id="ManageTableCar">
     <div id="manageCarTableContent">
         <div class="col">
@@ -418,7 +431,7 @@
         <button type="button" class="btn btn-warning" id="manageCarDetails" href="#">Manage Car Details >></button>
     </div>
 </section>
-<!------------------------Manage Car content----------------------------------------------->
+<!------------------------Manage Car content-------------------------------------------------->
 <section class="container-fluid" id="manageCar">
 <div id="manageCarContent">
     <section class="container-fluid  bg-black text-white">
@@ -539,14 +552,10 @@
 </div>
 
 </section>
-<!-----------------------Services Form Start-------------------------------------------->
+<!-----------------------Services Form Start-------------------------------------------------->
 <section class="container-fluid" id="serviceContent">
-   <div class="serviceThumbnail">
-        <h1 class="serviceTittle ">Our Services  >></h1>
-    </div>
     <div class="row justify-content-center" id="serviceInfoTitle">
         <div class="col">
-            <h3 class="text-primary " id="services2">SERVICES</h3>
             <h1><strong>Our Latest Services</strong></h1>
         </div>
     </div>
@@ -610,7 +619,7 @@
         </div>
     </div>
 </section>
-<!-----------------------Manage User-------------------------------------------------->
+<!-----------------------Manage User---------------------------------------------------------->
 <section class="container-fluid" id="manageUser">
     <section class="container-fluid  bg-black text-white">
         <h1 class="fw-bold">Manage User</h1>
@@ -756,10 +765,6 @@
 </section>
 <!---------------------------Car detailsContent Start------------------------------------------>
 <section class="container-fluid" id="carContent">
-
-    <div id="carThumbnail">
-        <h1 id="carTittle">Our Car Details</h1>
-    </div>
     <div class="col bg-transparent" id="carTable">
         <table class="table table-bordered table-hover">
             <thead class="bg-dark text-white">
@@ -986,28 +991,239 @@
 <!-------------------------car rental dash----------------------------------------------------->
 <section class="container-fluid" id="carRentalContent">
     <nav id="sidebarCus">
+        <div id="iconuser">
+        </div>
+        <div id="uibar">
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a id="linkCar" class="nav-link text-white" href="#"><i class="fas fa-solid fa-car-side"></i>  Manage Car</a>
+                <a id="linkBookingReq" class="nav-link text-white" href="#"><i class="fas fa-solid fa-car-side"></i>  Booking Request</a>
             </li>
             <li class="nav-item">
-                <a id="linkDriver" class="nav-link text-white" href="#"><i class="fas fa-solid fa-users"></i>  Manage Driver</a>
+                <a id="linkBookingRes" class="nav-link text-white" href="#"><i class="fas fa-solid fa-users"></i>  Booking Responses</a>
             </li>
             <li class="nav-item">
-                <a id="linkCustomer" class="nav-link text-white" href="#"><i class="fas fa-user-cog"></i>  Manage Customer</a>
-            </li>
-            <li class="nav-item">
-                <a id="linkPayment" class="nav-link text-white" href="#"><i class="fas fa-solid fa-credit-card"></i>  Manage Payment</a>
-            </li>
-            <li class="nav-item">
-                <a id="linkMaintenance" class="nav-link text-white" href="#"><i class="fas fa-solid fa-screwdriver"></i>  Manage Maintenance</a>
+                <a id="linkPaymentCus" class="nav-link text-white" href="#"><i class="fas fa-user-cog"></i>  Payment</a>
             </li>
         </ul>
+        </div>
     </nav>
+    <div id="sideUserDash">
+
+        <p id="collagePara">
+            Welcome To Our Service.
+        </p>
+    </div>
+</section>
+<!-------------------------Booking Req--------------------------------------------------------->
+<section id="dashUser" class="container-fluid bg-white">
+    <div>
+        <h1>Booking Request</h1>
+    </div>
+    <div class="row p-3">
+        <h3 class="h3  p-2 bg-warning text-black">Car and Driver Details</h3>
+        <div class="col-2">
+            <label for="cmbType" class="form-label mb-0">Car Type</label>
+            <select class="form-select" aria-label="Default select example" id="cmbType"
+                    name="type">
+                <option selected>- Select Car Type -</option>
+                <option value="1">General</option>
+                <option value="2">Premium</option>
+                <option value="3">Luxury</option>
+            </select>
+        </div>
+        <div class="col-2">
+            <label for="cmbRegistrationNo" class="form-label mb-0">Car Registration No</label>
+            <select class="form-select" aria-label="Default select example" id="cmbRegistrationNo"
+                    name="type">
+            </select>
+        </div>
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarBrand" class="form-label mb-0">Brand</label>
+                <input type="text" class="form-control" id="txtCarBrand" name="carBrand" disabled>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarColor" class="form-label mb-0">Color</label>
+                <input type="text" class="form-control" id="txtCarColor" name="carColor" disabled>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarFuel" class="form-label mb-0">Fuel Type</label>
+                <input type="text" class="form-control" id="txtCarFuel" name="carFuel" disabled>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarTransmission" class="form-label mb-0">Transmission</label>
+                <input type="text" class="form-control" id="txtCarTransmission" name="carTransmission" disabled>
+            </div>
+        </div>
+    </div>
+    <div class="row ms-0 me-0">
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarNoOfPassengers" class="form-label mb-0">No Of Passengers</label>
+                <input type="text" class="form-control" id="txtCarNoOfPassengers" name="carNoOfPassengers" disabled>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarDailyRate" class="form-label mb-0">Daily Rate (Rs.)</label>
+                <input type="text" class="form-control" id="txtCarDailyRate" name="carDailyRate" disabled>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarMonthlyRate" class="form-label mb-0">Monthly Rate (Rs.)</label>
+                <input type="text" class="form-control" id="txtCarMonthlyRate" name="carMonthlyRate" disabled>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarFreeKmForPrice" class="form-label mb-0">Free Km For Price (Km)</label>
+                <input type="text" class="form-control" id="txtCarFreeKmForPrice" name="carFreeKmForPrice" disabled>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarFreeKmForDuration" class="form-label mb-0">Free Km For Duration (Km)</label>
+                <input type="text" class="form-control" id="txtCarFreeKmForDuration" name="carFreeKmForDuration" disabled>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarLossDamageWavier" class="form-label mb-0">Loss Damage Wavier (Rs.)</label>
+                <input type="text" class="form-control" id="txtCarLossDamageWavier" name="carLossDamageWavier" disabled>
+            </div>
+        </div>
+    </div>
+    <div class="row ms-0 me-0">
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarPriceForExtraKm" class="form-label mb-0">Price For Extra Km (Rs.)</label>
+                <input type="text" class="form-control" id="txtCarPriceForExtraKm" name="carPriceForExtraKm" disabled>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="mb-3">
+                <label for="txtCarCompleteKm" class="form-label mb-0">Complete Km</label>
+                <input type="text" class="form-control" id="txtCarCompleteKm" name="carCompleteKm" disabled>
+            </div>
+        </div>
+        <div class="col-2">
+            <label class="form-label mb-0">Car Front View</label>
+            <div class="mb-3" id="divCarFrontView" style="height: 13vh; border: #fd0015 2px solid">
+
+            </div>
+        </div>
+        <div class="col-2">
+            <label class="form-label mb-0">Car Back View</label>
+            <div class="mb-3" id="divCarBackView" style="height: 13vh; border: #fd0015 2px solid">
+
+            </div>
+        </div>
+        <div class="col-2">
+            <label class="form-label mb-0">Car Side View</label>
+            <div class="mb-3" id="divCarSideView" style="height: 13vh; border: #fd0015 2px solid">
+
+            </div>
+        </div>
+        <div class="col-2">
+            <label class="form-label mb-0">Car Interior View</label>
+            <div class="mb-3" id="divCarInteriorView" style="height: 13vh; border: #fd0015 2px solid">
+            </div>
+        </div>
+    </div>
+</section>
+<!-------------------------Booking Responses----------------------------------------------------->
+<section id="bookingRes" class="container-fluid bg-white">
+        <div class="row text-center"><h1 class="h1 display-5">Booking Responses</h1></div>
+            <table class="table table-hover table-bordered table-striped" id="bookingResponsesTbl">
+                <thead class="bg-warning" style="color: black">
+                <tr>
+                    <th>Rent ID</th>
+                    <th>Date</th>
+                    <th>Pickup Date</th>
+                    <th>Return Date</th>
+                    <th>Registration No</th>
+                    <th>Customer ID</th>
+                    <th>Licence No</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="bookingResponsesTable">
+
+                </tbody>
+            </table>
+        <hr>
+        <div class="row ms-0 me-0">
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtRentId" class="form-label mb-0">Rent ID</label>
+                    <input type="text" class="form-control" id="txtRentId" name="rentId" disabled>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtDate" class="form-label mb-0">Date</label>
+                    <input type="text" class="form-control" id="txtDate" name="date" disabled>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtPickupDate" class="form-label mb-0">Pickup Date</label>
+                    <input type="text" class="form-control" id="txtPickupDate" name="pickupDate" disabled>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtReturnDate" class="form-label mb-0">Return Date</label>
+                    <input type="text" class="form-control" id="txtReturnDate" name="returnDate" disabled>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtRegistrationNo" class="form-label mb-0">Registration No</label>
+                    <input type="text" class="form-control" id="txtRegistrationNo" name="registrationNo" disabled>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtLicenceNo" class="form-label mb-0">Licence No</label>
+                    <input type="text" class="form-control" id="txtLicenceNo" name="licenceNo" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="row m-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button type="button" class="btn  mt-3 " id="btnDeleteRental"><i class="fas fa-trash"></i> Delete Rental</button>
+                <button type="button" class="btn mt-3" id="btnClearRental" style="background-color: #8e9090; color: white">Clear</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-------------------------Payment--------------------------------------------------------------->
+<section class="container-fluid bg-white" id="paymentUser">
+        <div class="row text-center"><h1 class="h1 display-5">Payments</h1></div>
+            <table class="table table-hover table-bordered table-striped" id="paymentsTbl">
+                <thead class="bg-warning" style="color: black">
+                <tr>
+                    <th>Payment ID</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Customer ID</th>
+                    <th>Rent ID</th>
+                </tr>
+                </thead>
+                <tbody id="paymentsTable">
+                </tbody>
+            </table>
+    </div>
 
 </section>
-
-
 
 
 
@@ -1024,6 +1240,10 @@
     $("#manageUser").css("display", "none");
     $("#manageDriver").css("display", "none");
     $("#carContent").css("display", "none");
+    $("#carRentalContent").css("display", "none");
+    $("#dashUser").css("display", "none");
+    $("#bookingRes").css("display", "none");
+    $("#paymentUser").css("display", "none");
 
     $("#linkHome").click(function () {
         $("#dashBoardContent").css("display", "block");
@@ -1034,6 +1254,10 @@
         $("#manageCar").css("display", "none");
         $("#manageDriver").css("display", "none");
         $("#carContent").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
     });
     $("#linkSignUp").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1043,6 +1267,10 @@
         $("#manageCar").css("display", "none");
         $("#manageDriver").css("display", "none");
         $("#carContent").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
     });
 
     $("#linkLogin").click(function () {
@@ -1057,6 +1285,16 @@
         $("#dashBoardContent").css("display", "none");
         $("#signUp").css("display", "none");
         $("#serviceContent").css("display", "block");
+        $("#manageCar").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#ManageTableCar").css("display", "none");
+        $("#adminDash").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
     });
 
     $("#linkCarManage").click(function () {
@@ -1069,6 +1307,10 @@
         $("#ManageTableCar").css("display", "block");
         $("#adminDash").css("display", "block");
         $("#carContent").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
     });
 
     $("#manageCarDetails").click(function () {
@@ -1081,6 +1323,10 @@
         $("#manageDriver").css("display", "none");
         $("#adminDash").css("display", "block");
         $("#carContent").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
     });
 
     $("#LinkBackToTable").click(function () {
@@ -1093,6 +1339,10 @@
         $("#manageUser").css("display", "none");
         $("#manageDriver").css("display", "none");
         $("#carContent").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
     });
     $("#linkCustomer").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1104,6 +1354,10 @@
         $("#manageUser").css("display", "block");
         $("#manageDriver").css("display", "none");
         $("#carContent").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
     });
     $("#linkDriver").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1115,17 +1369,10 @@
         $("#manageUser").css("display", "none");
         $("#manageDriver").css("display", "block");
         $("#carContent").css("display", "none");
-    });
-    $("#linkAbout").click(function () {
-        $("#dashBoardContent").css("display", "none");
-        $("#signUp").css("display", "none");
-        $("#serviceContent").css("display", "none");
-        $("#manageCar").css("display", "none");
-        $("#ManageTableCar").css("display", "none");
-        $("#adminDash").css("display", "none");
-        $("#manageUser").css("display", "none");
-        $("#manageDriver").css("display", "none");
-        $("#carContent").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
     });
     $("#linkCarDetails").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1137,7 +1384,57 @@
         $("#manageUser").css("display", "none");
         $("#manageDriver").css("display", "none");
         $("#carContent").css("display", "block");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
     });
+    $("#linkBookingReq").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#ManageTableCar").css("display", "none");
+        $("#adminDash").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#carRentalContent").css("display", "block");
+        $("#dashUser").css("display", "block");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
+    });
+    $("#linkBookingRes").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#ManageTableCar").css("display", "none");
+        $("#adminDash").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#bookingRes").css("display", "block");
+        $("#carRentalContent").css("display", "block");
+        $("#dashUser").css("display", "none");
+        $("#paymentUser").css("display", "none");
+    });
+    $("#linkPaymentCus").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#ManageTableCar").css("display", "none");
+        $("#adminDash").css("display", "none");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#carRentalContent").css("display", "block");
+        $("#dashUser").css("display", "none");
+        $("#paymentUser").css("display", "block");
+    });
+
 
     $("#loginBtn").click(function () {
     if ($("#typeEmailX").val()==="admin@gmail.com" && $("#typePasswordX").val()==="admin99") {
@@ -1145,7 +1442,15 @@
         $("#adminDash").css("display", "block");
         $("#loginForm").css("display", "none");
         $("#signUp").css("display", "none");
-    }});
+    }else if($("#typeEmailX").val()==="user@gmail.com" && $("#typePasswordX").val()==="user99"){
+        $("#dashBoardContent").css("display", "none");
+        $("#adminDash").css("display", "none");
+        $("#loginForm").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#carRentalContent").css("display", "block");
+        }});
+
+
 </script>
 
 </body>
