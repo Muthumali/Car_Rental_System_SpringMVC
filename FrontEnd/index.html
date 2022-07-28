@@ -1370,7 +1370,7 @@
             </div>
         </div>
 </section>
-<!-------------------------maintences------------------------------------------------------------>
+<!-------------------------request------------------------------------------------------------>
 <section class="container-fluid" id="reqContent">
         <div class="row text-center"><h1 class="h1 display-5">Rental Requests</h1></div>
         <div class="row ms-0 me-0">
@@ -1474,6 +1474,215 @@
         </div>
 
 </section>
+<!-------------------------responses------------------------------------------------------------>
+<section class="container-fluid" id="responsesContent">
+        <div class="row text-center"><h1 class="h1 display-5">Rental Returns</h1></div>
+        <hr>
+        <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
+            <div class="input-group d-flex align-items-center justify-content-center">
+                <div class="col-2">
+                    <input type="text" class="form-control" id="txtReturnId" name="returnId">
+                </div>
+            </div>
+        </div>
+        <div class="row ms-0 me-0">
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="txtReturnPaymentId" class="form-label mb-0">Payment ID</label>
+                    <input type="text" class="form-control" id="txtReturnPaymentId"
+                           name="rentalPaymentId" disabled>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="txtSearchRentId" class="form-label mb-0">Rent ID</label>
+                    <input type="text" class="form-control" id="txtSearchRentId"
+                           name="searchRentId">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="txtTotalPaidAmount" class="form-label mb-0">Total Paid Amount
+                        (Rs.)</label>
+                    <input type="text" class="form-control" id="txtTotalPaidAmount"
+                           name="totalPaidAmount" disabled>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <label for="txtTodayDate" class="form-label mb-0">Today</label>
+                    <input type="text" class="form-control" id="txtTodayDate"
+                           name="todayDate" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="row ms-0 me-0">
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtPickDate" class="form-label mb-0">Pickup Date</label>
+                    <input type="text" class="form-control" id="txtPickDate"
+                           name="pickDate" disabled>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtRDate" class="form-label mb-0">Return Date</label>
+                    <input type="text" class="form-control" id="txtRDate"
+                           name="rDate" disabled>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtRentForUseDates" class="form-label mb-0">Rent For Using Dates</label>
+                    <input type="text" class="form-control" id="txtRentForUseDates"
+                           name="rentForUseDates" disabled>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtDamageCost" class="form-label mb-0">Damage Cost (Rs.)</label>
+                    <input type="text" class="form-control" id="txtDamageCost"
+                           name="damageCost">
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtTotalKm" class="form-label mb-0">Total Km</label>
+                    <input type="text" class="form-control" id="txtTotalKm"
+                           name="totalKm">
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="mb-3">
+                    <label for="txtTotalPriceForExtraKm" class="form-label mb-0">Total Price For Extra
+                        Km</label>
+                    <input type="text" class="form-control" id="txtTotalPriceForExtraKm"
+                           name="totalPriceForExtraKm">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row ms-0 me-0">
+            <div class="col-3">
+                <div class="form-floating mb-3">
+                    <button type="button" class="btn mt-3 " id="btnCalPayment" style="background-color: red; color: white">Calculate
+                        Payment
+                    </button>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="txtTotalPayments" class="form-label mb-0">Total Payments (Rs.)</label>
+                    <input type="text" class="form-control" id="txtTotalPayments"
+                           name="totalPayments">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="txtBalance" class="form-label mb-0">Balance (Rs.)</label>
+                    <input type="text" class="form-control" id="txtBalance"
+                           name="balance">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row d-flex align-items-center justify-content-end">
+            <div class="col-3">
+                <button type="button" class="btn" id="btnSubmitPayment" style="background-color: blue; color: white">Submit Payment
+                </button>
+                <button type="button" class="btn" id="btnClearPayment" style="background-color: #454547; color: white">Clear</button>
+            </div>
+        </div>
+        <hr>
+        <div class="bg-light" style="height: 28vh">
+            <table class="table table-hover table-bordered table-striped" id="carRentaltbl">
+                <thead style="background-color: black; color: white">
+                <tr>
+                    <th>Rent ID</th>
+                    <th>Date</th>
+                    <th>Pickup Date</th>
+                    <th>Return Date</th>
+                    <th>Car Registration No</th>
+                    <th>Customer ID</th>
+                    <th>Driver Licence No</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tableCarRental">
+
+                </tbody>
+            </table>
+        </div>
+</section>
+<!-------------------------Income Reports------------------------------------------------------------>
+<section class="container-fluid" id="incomeReportContent">
+        <div class="row text-center"><h1 class="h1 display-5">Income Reports</h1></div>
+        <div class="row m-3">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <div>
+                    <label for="incomeFromDate" class="form-label">From</label>
+                    <input type="date" id="incomeFromDate" class="form-control" name="incomeFromDate"
+                           placeholder="Start Date">
+                </div>
+                <div>
+                    <label for="incomeToDate" class="form-label">To</label>
+                    <input type="date" id="incomeToDate" class="form-control" name="incomeToDate"
+                           placeholder="End Date">
+                </div>
+                <button type="button" class="btn btn-primary mt-3" id="btnSearchIncome" style="position: relative;height: 35px;top: 18px;">Search</button>
+            </div>
+        </div>
+        <div class="row ms-0 me-0">
+            <h3 class="h3  p-2 m-3 text-dark text-center">Payments</h3>
+        </div>
+        <div class="bg-light" style="height: 20vh">
+            <table class="table table-hover table-bordered table-striped" id="paymentsInDateRangeTbl">
+                <thead class="bg-dark text-white">
+                <tr>
+                    <th>Payment ID</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Rent ID</th>
+                    <th>Customer ID</th>
+                </tr>
+                </thead>
+                <tbody id="tblPaymentsInDateRange">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="row ms-0 me-0">
+            <h3 class="h3  p-2 m-3 text-dark text-center">Maintenances</h3>
+        </div>
+        <div class="bg-light" style="height: 20vh">
+            <table class="table table-hover table-bordered table-striped" id="maintenancesInDateRangeTbl">
+                <thead class="bg-dark text-white">
+                <tr>
+                    <th>Maintenance ID</th>
+                    <th>Date</th>
+                    <th>Cost</th>
+                    <th>Details</th>
+                    <th>Registration No</th>
+                </tr>
+                </thead>
+                <tbody id="tblMaintenancesInDateRange">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="row ms-0 me-0">
+            <div class="col-6">
+                <label class="h4" style="color: black;position:relative; top: 28px; left: 53%">Total Income = </label>
+                <label class="h4" style="color: black;position:relative; top: 28px; left: 54%">Rs. </label>
+                <label class="h4 text-danger" id="lblTotalIncome"></label>
+            </div>
+        </div>
+</section>
+<!-------------------------Driver Dash------------------------------------------------------------>
+<section class="container-fluid" id="driverDashContent">
+
+</section>
 
 <script src="assets/boostrap/js/bootstrap.bundle.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
@@ -1495,6 +1704,9 @@
     $("#paymentDetailsContent").css("display", "none");
     $("#mainteneceContent").css("display", "none");
     $("#reqContent").css("display", "none");
+    $("#responsesContent").css("display", "none");
+    $("#incomeReportContent").css("display", "none");
+    $("#driverDashContent").css("display", "none");
 
     $("#linkHome").click(function () {
         $("#dashBoardContent").css("display", "block");
@@ -1512,6 +1724,10 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+
     });
     $("#linkSignUp").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1528,6 +1744,10 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+
     });
 
     $("#linkLogin").click(function () {
@@ -1555,8 +1775,11 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
-    });
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
 
+    });
     $("#linkCarManage").click(function () {
         $("#dashBoardContent").css("display", "none");
         $("#signUp").css("display", "none");
@@ -1574,8 +1797,11 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
-    });
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
 
+    });
     $("#manageCarDetails").click(function () {
         $("#dashBoardContent").css("display", "none");
         $("#signUp").css("display", "none");
@@ -1593,8 +1819,11 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
-    });
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
 
+    });
     $("#LinkBackToTable").click(function () {
         $("#dashBoardContent").css("display", "none");
         $("#signUp").css("display", "none");
@@ -1612,6 +1841,10 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+
     });
     $("#linkCustomer").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1630,6 +1863,10 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+
     });
     $("#linkDriver").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1648,6 +1885,10 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+
     });
     $("#linkCarDetails").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1666,6 +1907,10 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+
     });
     $("#linkBookingReq").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1684,6 +1929,10 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+
     });
     $("#linkBookingRes").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1702,6 +1951,10 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+
     });
     $("#linkPaymentCus").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1720,6 +1973,10 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+
     });
     $("#linkPayment").click(function () {
         $("#dashBoardContent").css("display", "none");
@@ -1738,8 +1995,11 @@
         $("#paymentDetailsContent").css("display", "block");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "none");
-    });
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
 
+    });
     $("#linkMaintenance").click(function () {
         $("#dashBoardContent").css("display", "none");
         $("#signUp").css("display", "none");
@@ -1757,8 +2017,11 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "block");
         $("#reqContent").css("display", "none");
-    });
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
 
+    });
     $("#linkReq").click(function () {
         $("#dashBoardContent").css("display", "none");
         $("#signUp").css("display", "none");
@@ -1776,7 +2039,54 @@
         $("#paymentDetailsContent").css("display", "none");
         $("#mainteneceContent").css("display", "none");
         $("#reqContent").css("display", "block");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+
     });
+    $("#linkRentalReturn").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#ManageTableCar").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "block");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+    });
+    $("#linkIncomeReports").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#ManageTableCar").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#manageUser").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "block");
+        $("#driverDashContent").css("display", "none");
+    });
+
 
 
     $("#loginBtn").click(function () {
