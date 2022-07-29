@@ -3,6 +3,7 @@ package lk.ijse.spring.controller;
 import lk.ijse.spring.dto.DriverDTO;
 import lk.ijse.spring.service.DriverService;
 import lk.ijse.spring.util.ResponseUtil;
+import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -13,9 +14,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/v1/driver")
 @CrossOrigin
 public class DriverController {
+
     @Autowired
     DriverService service;
-
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil getAllDrivers() {
         return new ResponseUtil(200, "Ok", service.getAllDrivers());
@@ -23,15 +24,15 @@ public class DriverController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil saveDriver(DriverDTO dto) {
+    public ResponseUtil saveDriver(@RequestBody DriverDTO dto) {
         service.saveDriver(dto);
-        return new ResponseUtil(200, "Saved", null);
+        return new ResponseUtil(200, "Saved", true);
     }
 
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil updateCustomer(@RequestBody DriverDTO dto) {
         service.updateDriver(dto);
-        return new ResponseUtil(200, "Updated", null);
+        return new ResponseUtil(200, "Updated", true);
     }
 
     @DeleteMapping(params = {"licenceNo"}, produces = MediaType.APPLICATION_JSON_VALUE)
