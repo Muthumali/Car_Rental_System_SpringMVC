@@ -192,6 +192,6 @@ function bindClickEvents() {
         $("#contactNo").val(contactNo);
         $("#nicNo").val(nicNo);
         $("#driverUserName").val(userName);
-        $("#driverPassword").val(userName);
+        $("#driverPassword").val(password);
     });
 }

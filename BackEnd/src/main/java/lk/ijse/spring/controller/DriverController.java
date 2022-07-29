@@ -38,7 +38,7 @@ public class DriverController {
     @DeleteMapping(params = {"licenceNo"}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil deleteDriver(@RequestParam String licenceNo) {
         service.deleteDriver(licenceNo);
-        return new ResponseUtil(200, "Deleted", null);
+        return new ResponseUtil(200, "Deleted", true);
     }
 
     @GetMapping(path = "/{licenceNo}", produces = MediaType.APPLICATION_JSON_VALUE)
