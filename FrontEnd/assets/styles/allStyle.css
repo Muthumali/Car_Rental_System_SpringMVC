@@ -1,9 +1,10 @@
 /*nav style*/
-body::-webkit-scrollbar {
+/*body::-webkit-scrollbar {
     display: none;
-}
+}*/
 body{
     background-size: 100%;
+    overflow: hidden;
 }
 .nav-item {
     font-weight: bolder;
@@ -374,6 +375,13 @@ body >section> nav > div > a {
     left: 15vw;
     height: 100vh;
     width: 85vw;
+}
+#bookingRes2{
+    position: absolute;
+    left: 15vw;
+    height: 100vh;
+    width: 85vw;
+    background-color: gray;
 }
 #btnDeleteRental{
     background: red;

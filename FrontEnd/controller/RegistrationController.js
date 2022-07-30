@@ -25,7 +25,7 @@ var cusotmer = {
     contactNo: contact,
     email: cusEmail,
     nicNo: cusNicNo,
-    /* nicFrontImg:fileObjectNic1,
+    /*nicFrontImg:,
      nicBackImg:nicBackImg,*/
     licenceNo:licenceNo,
     licenceImg:licenceImg,
@@ -47,7 +47,7 @@ function saveCustomer() {
         },
         error: function (ob) {
 
-            alert(ob.massage);
+            alert("unsuccessfully");
         }
     });
 
