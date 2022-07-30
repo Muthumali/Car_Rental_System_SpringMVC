@@ -239,6 +239,9 @@
     <nav id="sidebar">
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
+                <a id="linkHomeAdmin" class="nav-link text-white" href="#"><i class="fas fa-solid fa-car-side"></i>  DashBoard</a>
+            </li>
+            <li class="nav-item">
                 <a id="linkCarManage" class="nav-link text-white" href="#"><i class="fas fa-solid fa-car-side"></i>  Manage Car</a>
             </li>
             <li class="nav-item">
@@ -267,10 +270,10 @@
         <section id="dashside">
         <div id="dashboard-pg">
             <div class="dashboard">
-                <div class="d-flex align-items-center">
+              <!--  <div class="d-flex align-items-center">
                     <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
                     <h2 class="fs-2 m-0">DASHBOARD</h2>
-                </div>
+                </div>-->
                 <div class="full-space container-fluid px-4">
                     <div class="details-space row g-3 my-2">
                         <div class="col-md-4">
@@ -752,7 +755,7 @@
 </section>
 <!---------------------------Car detailsContent Start------------------------------------------>
 <section class="container-fluid" id="carContent">
-    <div class="col bg-transparent row overflow-scroll" style="height: 80vh;" id="carTable">
+    <div class="col bg-transparent row overflow-scroll" style="height: 80vh;" id="carTable1">
         <table class="table table-bordered table-hover">
             <thead class="bg-dark text-white">
             <tr>
@@ -762,10 +765,10 @@
                 <th>Price</th>
             </tr>
             </thead>
-            <tbody id="tblCustomer1Json">
+            <tbody id="tblCarJson">
             <tr>
                 <td class="col-3">
-                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFade">
+                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFades1">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img alt="..." class="d-block w-100 carImg" src="assets/images/car1/front.jpg">
@@ -816,7 +819,7 @@
             </tr>
             <tr>
                 <td class="col-3">
-                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFade2">
+                    <div class="carousel slide carousel-fade " data-bs-ride="carousel" id="carouselExampleFades2">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img alt="..." class="d-block w-100 carImg" src="assets/images/car2/front.jpg">
@@ -867,7 +870,7 @@
             </tr>
             <tr>
                 <td class="col-3">
-                    <div class=" carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFade3">
+                    <div class=" carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFades3">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img alt="..." class="d-block w-100 carImg" src="assets/images/car3/front.jpg">
@@ -919,7 +922,7 @@
             </tr>
             <tr>
                 <td class="col-3">
-                    <div class=" carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFade4">
+                    <div class=" carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFades4">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img alt="..." class="d-block w-100 carImg" src="assets/images/car4/front.jpg">
@@ -1351,7 +1354,6 @@
 
 
 </section>
-
 <!-------------------------Booking Req part 02----------------------------------------------------->
 <section class="container-fluid" id="bookingRes2">
     <div class="row p-3">
@@ -2072,6 +2074,29 @@
         $("#bookingRes2").css("display", "none");
 
     });
+
+    $("#linkHomeAdmin").click(function () {
+        $("#dashBoardContent").css("display", "none");
+        $("#signUp").css("display", "none");
+        $("#adminDash").css("display", "block");
+        $("#serviceContent").css("display", "none");
+        $("#manageCar").css("display", "none");
+        $("#manageDriver").css("display", "none");
+        $("#carContent").css("display", "none");
+        $("#carRentalContent").css("display", "none");
+        $("#dashUser").css("display", "none");
+        $("#bookingRes").css("display", "none");
+        $("#paymentUser").css("display", "none");
+        $("#paymentDetailsContent").css("display", "none");
+        $("#mainteneceContent").css("display", "none");
+        $("#reqContent").css("display", "none");
+        $("#responsesContent").css("display", "none");
+        $("#incomeReportContent").css("display", "none");
+        $("#driverDashContent").css("display", "none");
+        $("#bookingRes2").css("display", "none");
+
+    });
+
 
     $("#linkLogin").click(function () {
         $("#rentCarBtnDashBoard").css("display", "none");
