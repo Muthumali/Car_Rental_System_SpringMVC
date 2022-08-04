@@ -7,7 +7,6 @@
     <link href="assets/boostrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/fonts/css/all.min.css" rel="stylesheet">
     <link href="assets/styles/allStyle.css" rel="stylesheet">
-
     <style>
 
         body {
@@ -215,7 +214,7 @@
                                        type="text">
                             </div>
                             <div class="mb-sm-0">
-                                <label class="form-label" for="password">Email</label>
+                                <label class="form-label" for="password">Password</label>
                                 <input class="form-control" id="password" name="Password" placeholder="Password"
                                        type="text">
                             </div>
@@ -726,7 +725,6 @@
                                 <th>Name</th>
                                 <th>Address</th>
                                 <th>Contact NO</th>
-                                <th>email</th>
                                 <th>NIC No</th>
                                 <th>UserName</th>
                                 <th>Password</th>
@@ -739,7 +737,6 @@
                                 <td>Chandana</td>
                                 <td>Matara</td>
                                 <td>0719543011</td>
-                                <td>chandana@gmail.com</td>
                                 <td>97857362V</td>
                                 <td>saman</td>
                                 <td>saman1234</td>
@@ -1509,7 +1506,6 @@
                 <button type="button" class="btn mt-3" id="btnClearRental" style="background-color: #8e9090; color: white">Clear</button>
             </div>
         </div>
-    </div>
 </section>
 <!-------------------------Payment user--------------------------------------------------------------->
 <section class="container-fluid bg-white" id="paymentUser">
@@ -2008,6 +2004,7 @@
 <script src="controller/AdminController.js"></script>
 <script src="controller/RegistrationController.js"></script>
 <script src="controller/DriverController.js"></script>
+<script src="controller/CarController.js"></script>
 <script>
     $("#dashBoardContent").css("display", "block");
     $("#loginForm").css("display", "none");
@@ -2523,48 +2520,6 @@
         saveCustomer();
     });
 
-    function Time() {
-
-        var date = new Date();
-
-        var hour = date.getHours();
-
-        var minute = date.getMinutes();
-
-        var second = date.getSeconds();
-
-        var period = "";
-
-        if (hour >= 12) {
-            period = "PM";
-        } else {
-            period = "AM";
-        }
-
-        if (hour == 0) {
-            hour = 12;
-        } else {
-            if (hour > 12) {
-                hour = hour - 12;
-            }
-        }
-
-        hour = update(hour);
-        minute = update(minute);
-        second = update(second);
-        document.getElementById("digitalClock").innerText = hour + " : " + minute + " : " + second + " " + period;
-        setTimeout(Time, 1000);
-    }
-
-    function update(t) {
-        if (t < 10) {
-            return "0" + t;
-        } else {
-            return t;
-        }
-    }
-
-    Time();
 </script>
 
 </body>

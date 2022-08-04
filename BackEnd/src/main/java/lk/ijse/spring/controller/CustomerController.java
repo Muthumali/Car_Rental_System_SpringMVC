@@ -28,21 +28,21 @@ public class CustomerController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseUtil saveCustomer(CustomerDTO dto) {
+    public ResponseUtil saveCustomer(@RequestBody CustomerDTO dto) {
         service.saveCustomer(dto);
-        return new ResponseUtil(200, "Saved", null);
+        return new ResponseUtil(200, "Saved", true);
     }
 
     @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto) {
         service.updateCustomer(dto);
-        return new ResponseUtil(200, "Updated", null);
+        return new ResponseUtil(200, "Updated", true);
     }
 
     @DeleteMapping(params = {"id"}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil deleteCustomer(@RequestParam String id) {
         service.deleteCustomer(id);
-        return new ResponseUtil(200, "Deleted", null);
+        return new ResponseUtil(200, "Deleted", true);
     }
 
     @GetMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -92,7 +92,7 @@ public class CustomerController {
     @PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil uploadImagesAndPath(@RequestPart("nicf") MultipartFile nicf, @RequestPart("nicb") MultipartFile nicb, @RequestPart("licenceImg") MultipartFile licenceImg, @PathVariable String id) {
         try {
-            String projectPath = String.valueOf(new File("/media/muthu/Disk D/ProjectFiles/Easy_Car_Rent"));
+            String projectPath = String.valueOf(new File("/media/muthu/AAD_Project_Final/Easy_Car_Rental_System/FrontEnd/Save_Image"));
             File uploadsDir = new File(projectPath + "/Customers");
             uploadsDir.mkdir();
             nicf.transferTo(new File(uploadsDir.getAbsolutePath() + "/" + nicf.getOriginalFilename()));
@@ -105,11 +105,11 @@ public class CustomerController {
 
             service.uploadCustomerImages(nicfPath, nicbPath, licenceImgPath, id);
 
-            return new ResponseUtil(200, "Uploaded", null);
+            return new ResponseUtil(200, "Uploaded", true);
 
         } catch (IOException e) {
             e.printStackTrace();
-            return new ResponseUtil(500, "Error", null);
+            return new ResponseUtil(500, "Error", false);
         }
     }
 

@@ -112,21 +112,22 @@ function deleteDriver() {
 
     // initiate the request
     $.ajax({
-        url: baseUrl2 + "?id=" + LId,// viya query string
+        url: baseUrl2 + "?licenceNo=" + LId,// viya query string
         method: "DELETE",
         //data:data,// application/x-www-form-urlencoded
         success: function (res) {
-            if (res.code == 200) {
+            if (res.code === 200) {
                 alert("driver Successfully Deleted");
                 driverLoadTable();
                 clearForm();
             }
         },
         error: function (ob) {
-            alert(ob.responseJSON.message);
+            alert("driver Deleted Unsuccessfully");
         }
     });
 }
+
 //Search driver Event
 $("#driverLicenceNo").on("keypress", function (e) {
     if (e.key == "Enter") {

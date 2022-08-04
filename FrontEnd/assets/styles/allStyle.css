@@ -52,6 +52,9 @@ body >section> nav > div > a {
 }
 
 /*login form*/
+.mb-4 {
+    margin-bottom: 0 !important;
+}
 #loginForm{
     width: 28vw;
     height: 510px;
@@ -76,6 +79,11 @@ body >section> nav > div > a {
     background:transparent;
 }
 
+#userType{
+    width: 42%;
+    height: 10%;
+    border-radius: 1rem;
+}
 /*sign up*/
 #sec1{
     position: absolute;
